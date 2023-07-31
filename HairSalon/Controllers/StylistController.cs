@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 using HairSalon.Models;
 
 namespace HairSalon.Controllers
@@ -31,13 +33,13 @@ namespace HairSalon.Controllers
       return RedirectToAction("Index");
     }
 
-    public ActionResult stylist_details(int id)
+    public ActionResult Details(int id)
     {
-      Stylist thisStylist = _db.Stylist.Include(stylist_details => stylist.Client).FirstOrDefault(Stylist => stylist_details.stylist_id == id);
+      Stylist thisStylist = _db.Stylist.Include(stylist => stylist.Clients).FirstOrDefault(stylist => stylist.stylist_id == id);
       return View(thisStylist);
     }
 
-    public ActionResult (int id)
+    public ActionResult Edit(int id)
     {
       Stylist thisStylist = _db.Stylist.FirstOrDefault(stylist_details => stylist_details.stylist_id == id);
       return View(thisStylist);
@@ -57,7 +59,7 @@ namespace HairSalon.Controllers
       return View(thisStylist);
     }
 
-    [HttpPst, ActionName("Delete")]
+    [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
       Stylist thisStylist = _db.Stylist.FirstOrDefault(Stylist => Stylist.stylist_id == id);

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.Linq;
 using HairSalon.Models;
 
 namespace HairSalon.Controllers
@@ -38,10 +40,10 @@ namespace HairSalon.Controllers
       return View(thisClient);
     }
 
-    public ActionResult Edit (int id)
+    public ActionResult Edit(int id)
     {
-      Client thisClient = _db.Client.FirstOrDefault(client_details => client_details.client_id == id);
-      Viewbag.stylist_id = new SelectList(_db.Stylist, "stylist_id", "stylist_name");
+      Client thisClient = _db.Client.FirstOrDefault(client => client.client_id == id);
+      ViewBag.stylist_id = new SelectList(_db.Stylist, "stylist_id", "stylist_name");
       return View(thisClient);
     }
 
