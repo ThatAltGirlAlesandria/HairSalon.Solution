@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
--- Host: localhost    Database: hairsalon
+-- Host: localhost    Database: alesandria_wild
 -- ------------------------------------------------------
 -- Server version	8.0.33
 
@@ -23,27 +23,27 @@ DROP TABLE IF EXISTS `clients`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `clients` (
-  `client_id` int NOT NULL AUTO_INCREMENT,
-  `client_name` varchar(255) DEFAULT NULL,
-  `client_details` varchar(255) DEFAULT NULL,
-  `stylist_id` int DEFAULT NULL,
-  PRIMARY KEY (`client_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ClientId` int NOT NULL AUTO_INCREMENT,
+  `ClientName` varchar(255) DEFAULT NULL,
+  `ClientDetails` varchar(255) DEFAULT NULL,
+  `StylistId` int DEFAULT NULL,
+  PRIMARY KEY (`ClientId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci PACK_KEYS=1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `stylist`
+-- Table structure for table `stylists`
 --
 
-DROP TABLE IF EXISTS `stylist`;
+DROP TABLE IF EXISTS `stylists`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `stylist` (
-  `stylist_id` int NOT NULL AUTO_INCREMENT,
-  `stylist_name` varchar(255) DEFAULT NULL,
-  `stylist_details` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`stylist_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `stylists` (
+  `StylistId` int NOT NULL AUTO_INCREMENT,
+  `StylistName` varchar(255) DEFAULT NULL,
+  `StylistDetails` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +55,4 @@ CREATE TABLE `stylist` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-31 16:45:55
+-- Dump completed on 2023-08-02 16:39:40

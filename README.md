@@ -84,7 +84,7 @@ appsettings.json
   }
 }
 ```
-* _Replace [you_database] with the name of your database (alesandria_wild.sql)_
+* _Replace [your_database] with the name of your database (alesandria_wild.sql)_
 * _Replace [user-id] with your SQL username_
 * _Replace [password] with your SQL password_
 * _Lastly, in your command line type_

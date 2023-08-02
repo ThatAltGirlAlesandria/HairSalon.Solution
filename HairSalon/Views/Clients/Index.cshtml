@@ -10,16 +10,16 @@
   {
     <h3>Currently, you have no clients in the database.</h3>
   }
-  <ul>
-    @foreach (Client client in Model)
-    {
-      <p>@Html.ActionLink($"{client.client_name}", "Details", new {id = client.client_id})</p>
-    }
-  </ul>
+
+    <ul>
+      @foreach (Client client in Model)
+      {
+        <li>@Html.ActionLink($"{client.ClientName}", "Details", new {id = client.ClientId})</li>
+      }
+    </ul>
 </div>
 
-
-<p>@Html.ActionLink("Add Client", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
 <p>@Html.ActionLink("Clients", "Index", "Clients")</p>
 <p>@Html.ActionLink("Stylists", "Index", "Stylists")</p>
+<p>@Html.ActionLink("Add Client", "Create")</p>

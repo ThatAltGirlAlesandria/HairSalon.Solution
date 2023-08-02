@@ -4,9 +4,9 @@ namespace HairSalon.Models
 {
   public class Stylist
   {
-    public int stylist_id { get; set; }
-    public string stylist_name { get; set; }
-    public string stylist_details { get; set; }
-    public List<Client> Client { get; set; }
+    public int StylistId { get; set; }
+    public string StylistName { get; set; }
+    public string StylistDetails { get; set; }
+    public List<Client> Clients { get; set; }
   }
 }
